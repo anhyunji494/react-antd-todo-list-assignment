@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Flex, List, Input, Checkbox, Space, Button } from 'antd';
+import { Flex, List, Input, Checkbox, Button } from 'antd';
 import { DeleteOutlined } from '@ant-design/icons';
 import 'antd/dist/reset.css';
 
@@ -10,8 +10,8 @@ const boxStyle = {
 
 const App = () => {
   const [todoList, setTodoList] = useState([
-    { id: 1, text: '환경 설정하기', completed: false },
-    { id: 2, text: '구조 구상하기', completed: false },
+    { id: 1, text: '오늘의 할일1', completed: false },
+    { id: 2, text: '오늘의 할일2', completed: false },
   ]);
   const [current, setCurrent] = useState('');
 
@@ -83,7 +83,7 @@ const App = () => {
           />
           <Input
             value={current}
-            placeholder="투두리스트를 작성하세요."
+            placeholder="오늘의 할일을 작성하세요."
             onChange={onChange}
             onKeyDown={onKeyDown}
           />
